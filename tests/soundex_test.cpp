@@ -20,3 +20,9 @@ TEST_F(SoundexEncoding, PadsWithZerosToEnsureThreeDigits) {
     auto encoded = soundex.encode("I");
     ASSERT_THAT(encoded, Eq("I000"));
 }
+
+TEST_F(SoundexEncoding, ReplacesConsonantsWithAppropriateDigits) {
+    ASSERT_THAT(soundex.encode("Ab"), Eq("A100"));
+}
+
+// https://www.safaribooksonline.com/library/view/modern-c-programming/9781941222423/f_0037.html
