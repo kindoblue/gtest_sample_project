@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 
+
+
 include("cmake/HunterGate.cmake")
 
 HunterGate(
@@ -8,10 +10,12 @@ HunterGate(
 )
 
 
+
 project(soundex)
 
-hunter_add_package(GTest)
+set (CMAKE_CXX_STANDARD 11)
 
+hunter_add_package(GTest)
 
 find_package(GTest CONFIG REQUIRED) 
 find_package(GMock CONFIG REQUIRED) 
