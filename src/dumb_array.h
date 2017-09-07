@@ -37,9 +37,9 @@ public:
     }
 
 
-    // assignment and move assignment implemented with only one
-    // method (copy and swap idiom)
-
+    // copy assignment and move assignment implemented with only one
+    // method (copy and swap idiom). Note the param passed by value
+    // so the compiler can use copy or move constructor. No duplication of code
     dumb_array& operator=(dumb_array other)
     {
         swap(*this, other);
