@@ -7,6 +7,7 @@
 
 #include <algorithm>
 #include <cstddef>
+#include <boost/chrono/system_clocks.hpp>
 
 class dumb_array {
 
@@ -16,6 +17,7 @@ public:
             : mSize(size),
               mArray(mSize ? new int[mSize]() : nullptr)
     {
+        boost::chrono::system_clock::now();
     }
 
     // copy-constructor
