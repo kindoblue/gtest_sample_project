@@ -8,10 +8,12 @@ include("cmake/HunterGate.cmake")
 HunterGate(
         URL "https://github.com/ruslo/hunter/archive/v0.19.111.tar.gz"
         SHA1 "683bdd1a56711abd24907973665f7f58f792ce5f"
+        LOCAL
 )
 
 project(soundex)
 
+# add packages
 hunter_add_package(GTest)
 hunter_add_package(Boost COMPONENTS system chrono)
 
